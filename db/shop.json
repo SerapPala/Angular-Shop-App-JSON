@@ -1,0 +1,90 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Laptop",
+      "price": 2500,
+      "categoryId": 1,
+      "description": "Asus ZenBook",
+      "imageUrl": "https://images.pexels.com/photos/1714208/pexels-photo-1714208.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+    },
+    {
+      "id": 2,
+      "name": "Mouse",
+      "price": "25,00",
+      "categoryId": 2,
+      "description": "A4 Tech",
+      "imageUrl": "https://images.pexels.com/photos/392018/pexels-photo-392018.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+    },
+    {
+      "name": "Telefon",
+      "description": "Iphone 8 Telefon",
+      "imageUrl": "https://images.pexels.com/photos/4765366/pexels-photo-4765366.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "price": "5,000.00",
+      "categoryId": "2",
+      "id": 3
+    },
+    {
+      "name": "Telefon",
+      "imageUrl": "https://images.pexels.com/photos/4348791/pexels-photo-4348791.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "price": "4.000.00",
+      "categoryId": "2",
+      "description": "Iphone 7 Telefon",
+      "id": 4
+    },
+    {
+      "name": "Telefon",
+      "description": "Iphone 8 Telefon",
+      "imageUrl": "https://images.pexels.com/photos/4765366/pexels-photo-4765366.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "price": "5,000.00",
+      "categoryId": "2",
+      "id": 5
+    },
+    {
+      "name": "Buzdolabı",
+      "description": "Arçelik no-frost buzdolabo",
+      "imageUrl": "https://images.pexels.com/photos/4068316/pexels-photo-4068316.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "price": "2000",
+      "categoryId": "2",
+      "id": 6
+    },
+    {
+      "name": "Buzdolabı",
+      "description": "Arçelik no-frost buzdolabo",
+      "imageUrl": "https://images.pexels.com/photos/4765366/pexels-photo-4765366.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "price": "5,000.00",
+      "categoryId": "1",
+      "id": 7
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "name": "Elektronik"
+    },
+    {
+      "id": 2,
+      "name": "Bilgisayar"
+    },
+    {
+      "id": 3,
+      "name": "Kırtasiye"
+    },
+    {
+      "id": 4,
+      "name": "Yapı"
+    },
+    {
+      "id": 5,
+      "name": "Oyuncak"
+    },
+    {
+      "id": 6,
+      "name": "Spor"
+    },
+    {
+      "id": 7,
+      "name": "Kozmetik"
+    }
+  ]
+}
