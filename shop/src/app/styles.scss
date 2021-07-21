@@ -1,0 +1,316 @@
+@import  "~bootstrap/dist/css/bootstrap.min.css" ;
+@import  "~font-awesome/css/font-awesome.min.css" ;
+@import  "~alertifyjs/build/css/alertify.min.css";
+@import  "~alertifyjs/build/css/themes/bootstrap.min.css";
+
+//responsive//
+@mixin media ($screensize) {
+
+  @if ($screensize == x-large) {
+      @media(max-width: 1140px) { @content };
+  }
+
+  @if ($screensize == large) {
+      @media(max-width: 992px) { @content };
+  }
+
+  @if ($screensize == medium) {
+      @media(max-width: 768px) { @content };
+  }
+
+  @if ($screensize == small) {
+      @media(max-width: 576px) { @content };
+  }
+}
+//responsive//
+
+
+/** MIXIN **/
+@mixin flex-display($display, $align-items, $justify-content) {
+  display: $display;
+  align-items: $align-items;
+  justify-content: $justify-content;
+}
+
+
+@mixin backgroundSize($parallax:inherit) {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: $parallax;
+}
+
+@mixin flexCenter($direction:row,$content : center) {
+  display: flex;
+  justify-content: $content;
+  align-items: center;
+  flex-direction: $direction;
+}
+
+
+@mixin p_line_height {
+  line-height: 2.4rem;
+}
+
+@mixin newFilmItemHover {
+  color: $white;
+  cursor: pointer;
+  background-color: $hover;
+}
+
+@mixin primaryButtonList {
+  border-radius: .2rem;
+  padding: 1rem 4rem;
+  border: none;
+  background-color: $gray-color;
+  color: $white;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+/** MIXIN **/
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+/** VARIABLES **/
+$primary-font: 'Poppins', sans-serif;
+$secondary-font: 'Open Sans', sans-serif;
+$primary-color: #FFB320; ///buttons
+$secondary-color: #333; //dropdown background
+$gray-color:#6c757d;
+$light-color:#f8f9fa; //body background
+
+
+$general-transition: all .5s;
+
+$border-radius:45%;
+
+$hover:#e0e1e4;
+$back:#aeb0b3;
+
+$white : #fefefe;
+$black : #090909;
+
+$mobileSize :40em;
+$tabletSize :64em;
+$desktopSize :80em;
+/** VARIABLES **/
+
+// UTILITIES //
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+
+}
+
+body {
+
+  color: $light-color;
+  font-size: 2rem;
+  font-family: $secondary-font;
+}
+
+main {
+  overflow: hidden;
+}
+
+.container {
+  max-width: 114rem;
+  margin: 0 auto;
+  width: 100%;
+}
+
+section {
+  padding: 8rem 0;
+
+  @include media(medium) {
+    padding: 4rem 0;
+  }
+
+  @include media(small) {
+    flex-wrap:wrap;
+  }
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: $primary-font;
+  color: $primary-color;
+  font-weight: 300;
+  letter-spacing: .3rem;
+}
+
+h1 {
+  font-size: 8rem;
+  @include media(large) {
+    font-size: 5rem;
+  }
+
+}
+
+h2 {
+  font-size: 5rem;
+  color: $gray-color;
+  @include media(large) {
+    font-size: 3.6rem;
+  }
+}
+
+h3 {
+  font-size: 2.9rem;
+  margin-bottom:3rem;
+}
+
+h4 {
+  font-size: 2.8rem;
+  color:$gray-color;
+}
+
+h5 {
+  font-size: 2.2rem;
+  color:$primary-color;
+}
+
+
+
+a {
+  text-decoration: none;
+
+  font-family: $primary-font;
+  color:$secondary-color;
+}
+
+ul {
+  list-style: none;
+  color:$secondary-color;
+}
+li{
+
+  a{
+      color:$gray-color;
+  }
+}
+
+img {
+  width: 100%;
+}
+
+i{
+  color:$primary-color;
+}
+
+
+.bg {
+    &-dark {
+        background-color: $secondary-color;
+    }
+
+    &-light {
+        background-color: $light-color;
+    }
+}
+
+.ml {
+    &-2 {
+        margin-left: 2rem;
+    }
+}
+
+.m {
+    &-1 {
+        margin: 1rem;
+    }
+}
+
+.text-light {
+    color: $light-color;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-primary {
+    color: $primary-color;
+}
+
+
+
+.text-center { text-align: center; }
+.img-responsive { max-width: 100%; }
+.text-primaryDark { color: $secondary-color; }
+.border-radius-sm { border-radius: .2rem; }
+.border-radius-md { border-radius: .5rem; }
+.border-radius-lg { border-radius: .8rem; }
+.w-50 { max-width: 50%;
+  @include media(small) {
+    max-width: 90%;
+}
+}
+
+
+/** BUTTONS **/
+
+.btn {
+    background-color: $gray-color;
+    color: $primary-color;
+    padding: 1rem;
+    font-size: 1.1rem;
+    border: none;
+    outline: none;
+    letter-spacing: 2px;
+    transition: all .5s;
+
+    @include media(medium) {
+        padding: .2rem 1rem;
+    }
+    @include media(small) {
+
+        padding: 1rem 1rem;
+    }
+    &:hover {
+        background-color: $primary-color;
+        color: $light-color;
+    }
+
+    &-primary {
+        background-color: $primary-color;
+        color: $light-color;
+
+        &:hover {
+            background-color: $gray-color;
+            color: $primary-color;
+        }
+    }
+
+}
+
+/** BADGES **/
+.badge {
+    border: none;
+
+    font-size: 1.1rem;
+    color: $light-color;
+    background-color: $gray-color;
+    margin: 5rem;
+    letter-spacing: .2rem;
+
+    &-tech {
+        background-color: $gray-color;
+    }
+
+    &-art {
+        background-color: $gray-color;
+    }
+
+}
+
+/** RATING **/
+
+
